@@ -8,15 +8,15 @@ existing_models = ['Beedle', 'Crossroads', 'M2', 'Panique']
 #DEFAULT ROOT INIT
 @app.route('/')#DECORATOR 
 def index():
-    return '<h1>Welcome to Flatiron Cars!</h1>'#returns HTML using ' '
+    return 'Welcome to Flatiron Cars!'#returns HTML using ' '
 
 #ROUTE MODEL
 @app.route('/<string:model>')#dynamic route with <datatype: name of variable>
 def user(model):#takes argument of string, named username
     if model in existing_models:#check if model is in "existing_model"
-        return f"<h1>Flatiron {model} is in our fleet!</h1>"
+        return f'Flatiron {model} is in our fleet!'
     else:
-        return f"<h1>No models called {model} exists in our catalog.</h1>"
+        return f'No models called {model} exists in our catalog'
 
 #run file directly on app.py using python app.py
 if __name__ == '__main__':
