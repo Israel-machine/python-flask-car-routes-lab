@@ -8,7 +8,7 @@ existing_models = ['Beedle', 'Crossroads', 'M2', 'Panique']
 #DEFAULT ROOT INIT
 @app.route('/')#DECORATOR 
 def index():
-    return 'Welcome to Flatiron Cars!'#returns HTML using ' '
+    return 'Welcome to Flatiron Cars'#returns HTML using ' '
 
 #ROUTE MODEL
 @app.route('/<string:model>')#dynamic route with <datatype: name of variable>
